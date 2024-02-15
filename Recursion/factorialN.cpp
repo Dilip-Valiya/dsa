@@ -10,5 +10,5 @@ int fact(int n)
 
 int main()
 {
-  cout << fact(4);
+  cout << fact(4) << endl;
 }
