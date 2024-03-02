@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Function to find all .cpp files recursively
+# Function to find all .cpp files recursively, excluding the "Codeforces" folder
 find_cpp_files() {
-    find . -type f -name '*.cpp'
+    find . -type d -name 'Codeforces' -prune -o -type f -name '*.cpp' -print
 }
 
 # Generate Makefile
