@@ -11,7 +11,7 @@ generate_makefile() {
     for file in $(find_cpp_files); do
         filename=$(basename "$file")
         filename_no_ext="${filename%.*}"
-        echo -e "\tg++ $file -o ${file%/*}/$filename_no_ext.out"
+        echo -e "\tg++ -std=c++11 $file -o ${file%/*}/$filename_no_ext.out"
     done
 
     echo -e "\ncheck:"
